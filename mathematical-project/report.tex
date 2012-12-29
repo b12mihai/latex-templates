@@ -1,0 +1,94 @@
+\documentclass[12pt,a4paper]{article}
+
+%This is useful specially for those who use Romanian characters
+\usepackage[utf8x]{inputenc}
+\usepackage{ucs}
+\usepackage[romanian]{babel}
+
+%All the math symbols stuff, you can comment those which you do not use!
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+% Include support for graphics
+\usepackage[pdftex]{color,graphicx}
+
+% Include support for linking table of contents to sections, footnotes & other hyperlinks
+\usepackage[bookmarks]{hyperref}
+% You can format the colors as you wish, here is an example:
+% \hypersetup{unicode=true,%
+% 	colorlinks=true,%
+% 	citecolor=red,%
+% 	filecolor=green,%
+% 	linkcolor=black,%
+% 	urlcolor=blue}
+
+% Decomment this if you want to indent first paragraph
+%\usepackage{indentfirst}
+
+%To use headers, find out more about fancyhdr package :) 
+
+%Info
+\title{My cool report or essay for lab X}
+\author{Name Surname}
+
+% Ok, command names are suggestive, this is if you want to customize your documents 
+% keywords or let LaTeX use it's default ones
+% Decomment what are you interested in
+
+% \renewcommand{\dateseparator}{.}
+% \ddmmyyyydate
+% \renewcommand{\contentsname}{Cuprins}
+% \renewcommand{\figurename}{Figura}
+% \renewcommand{\tablename}{Tabelul}
+
+% Definition, theorem, proof, lemma & other crappy enivronments from the same category
+% Decomment what are you interested in
+
+% \newtheorem{definition}{Definiția}
+% \numberwithin{definition}{section} % Definitia (SECTION_NO.DEFINITION_COUNT)
+% 
+% \newtheorem{theorem}{Teorema}
+% \numberwithin{theorem}{section}
+% 
+% \newtheorem{obs}{Observația}
+% \numberwithin{obs}{section}
+% 
+% \renewcommand{\proofname}{\underline{Demonstrație}}
+% \renewcommand{\qedsymbol}{$\blacksquare$}
+
+% Equation formatting for writing more beautiful and visible equations (in my opinion!! 
+% There might be some other cooler options out there)
+\everymath{\displaystyle} % All equations have displaystyle so no worry about forgetting this before a complicated equation
+\numberwithin{equation}{section}  % Equation (SECTION_NO.EQ_COUNT)
+%Syntax for this: \DeclareMathSizes{textsize}{mathsize}{subscriptsize}{subscriptscriptsize}
+\DeclareMathSizes{13}{23}{13}{9}
+
+\begin{document}
+ 
+ 
+ % Do you really need a sexy cover for your project? I was lazy, didn't do that
+ \maketitle
+ \newpage
+ \tableofcontents
+  \newpage
+ \section{Some Examples}
+ 
+ {\bf Dynamical Systems - Continuous Model} (nonlinear): $(\mathcal{U}, f, g)$ where
+
+\begin{equation}
+\label{eq:SDN}
+\left\{ \begin{aligned}
+        x'(t) = & f(t, x(t), u(t)) \ \\
+        y(t) = & g(t, x(t)) \ 
+       \end{aligned}
+ \right.
+ \qquad 
+\end{equation}
+
+Some approximations, equations within text: $\| x - \bar{x}\| < \varepsilon_x$, $\| u - \bar{u}\| < \varepsilon_u$, $\| y - \bar{y}\| < \varepsilon_y$
+ 
+\end{document}
+
