@@ -1,0 +1,122 @@
+%Use other colors at your own risk!
+\documentclass[red]{beamer}
+\usepackage{color}
+\setbeamertemplate{navigation symbols}{}
+\usepackage[utf8x]{inputenc}
+\usepackage{graphicx}
+\usepackage{beamerthemeshadow}
+
+\usetheme{CambridgeUS}
+\setbeamercolor{itemize item}{fg=red} % all frames will have green bullets
+
+\title{My title}  
+\author{Mihai Bărbulescu}
+\institute{PUB}
+\date{\today} 
+
+% All the kudos for this go to the author of this post: http://tex.stackexchange.com/a/28772
+\newenvironment<>{problock}[1]{%
+  \begin{actionenv}#2%
+      \def\insertblocktitle{#1}%
+      \par%
+      \mode<presentation>{%
+        \setbeamercolor{block title}{fg=white,bg=orange!20!black}
+       \setbeamercolor{block body}{fg=black,bg=olive!50}
+       \setbeamercolor{itemize item}{fg=orange!20!black}
+       \setbeamertemplate{itemize item}[triangle]
+     }%
+      \usebeamertemplate{block begin}}
+    {\par\usebeamertemplate{block end}\end{actionenv}}
+
+
+\begin{document}
+
+
+% Slide-urile cu mai multe părți sunt marcate cu textul (cont.)
+\setbeamertemplate{frametitle continuation}[from second]
+
+% Arătăm numărul frame-ului
+%\setbeamertemplate{footline}[frame number]
+
+\frame{\titlepage}
+
+\frame{\tableofcontents}
+
+% NB: Secțiunile nu sunt marcate vizual, ci doar apar în cuprins
+\section{Context}
+
+% Titlul unui frame se specifică fie în acolade, imediat după \begin{frame},
+% fie folosind \frametitle
+\begin{frame}{TODO}
+	\begin{itemize}		% Just like normal LaTeX
+		\item TODO
+	\end{itemize}
+\end{frame}
+
+\section{Design}
+
+\begin{frame}{TODO}
+	\begin{itemize}
+		\item Boxes
+			\begin{beamerboxesrounded}[lower=block body,shadow=true]{}
+				\texttt{A more attractive text in a box!}
+			\end{beamerboxesrounded}
+		\item TODO
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Section}
+\begin{theorem}
+ Beat this, it is even cooler than beamer boxes rounded! The only disadvantage is that the title is set to Theorem
+ or whatever you set with renewcommand \\theorem
+\end{theorem}
+
+\end{frame}
+
+\section{Another section}
+
+\begin{frame}{TODO}
+ \begin{alertblock}{Alert block}
+  Ok, this is a red warning
+    \end{alertblock}
+     \begin{exampleblock}{Example block}
+  Ok, I am green
+    \end{exampleblock}
+    \begin{problock}{The special one!}
+     Ok, I am customized!
+    \end{problock}
+
+\end{frame}
+	
+\section{Rezultate}
+
+\begin{frame}{TODO}
+	\begin{itemize}
+		\item TODO
+		\item TODO
+	\end{itemize}
+\end{frame}
+
+\section{Questions}
+
+\begin{frame}{Questions}
+  \begin{columns}
+    \begin{column}[l]{0.4\textwidth}
+      \begin{itemize}
+        \item key word
+        \item key word
+        \item key word
+        \item key word
+        \item key word
+      \end{itemize}
+    \end{column}
+    \begin{column}[c]{0.6\textwidth}
+      \begin{figure}
+        \includegraphics[scale=0.3]{img/red-question-mark}
+      \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\end{document}

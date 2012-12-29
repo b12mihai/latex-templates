@@ -9,6 +9,9 @@
 \usepackage{ucs}
 \usepackage[romanian]{babel}
 
+% To format your page for print version or better view, adjust here
+\usepackage[hmargin=2cm,vmargin=2.5cm]{geometry}
+
 %All the math symbols stuff, you can comment those which you do not use!
 \usepackage{amsmath}
 \usepackage{amsthm}
@@ -40,9 +43,15 @@
 
 %To use headers, find out more about fancyhdr package :) 
 
-%Info
-\title{My cool report or essay for algorithms course}
-\author{Name Surname}
+%Info, and saving in variables!
+\makeatletter
+\title{My cool report or essay for algorithms course}\let\Title\@title
+\author{Name Surname}\let\Author\@author
+\date{\today}           \let\Date\@date
+\newcommand{\coursename}{Algorithms Design}
+\newcommand{\semester}{Fall 2012}
+\newcommand{\institute}{UPB} %you can also place a logo here with \inputgraphics
+\makeatother
 
 % Ok, command names are suggestive, this is if you want to customize your documents 
 % keywords or let LaTeX use it's default ones
@@ -75,6 +84,18 @@
 \numberwithin{equation}{section}  % Equation (SECTION_NO.EQ_COUNT)
 %Syntax for this: \DeclareMathSizes{textsize}{mathsize}{subscriptsize}{subscriptscriptsize}
 \DeclareMathSizes{13}{23}{13}{9}
+
+%To use headers and/or footers, find out more about fancyhdr package :) 
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\chead{}
+\rhead{\Author, \Title}
+\lhead{}
+\cfoot{}
+\rfoot{\textcolor{black!80}{\hspace{0.04\textwidth}\coursename, \semester, \institute
+\hfill \thepage\ }}
 
 \begin{document}
   \maketitle
@@ -227,4 +248,3 @@ child {node {$T(1)$}}}
 \end{figure}
   
 \end{document}
-
