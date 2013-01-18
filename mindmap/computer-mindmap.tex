@@ -1,0 +1,79 @@
+% Author: Mihai Barbulescu
+% Source: It is based on the example from http://www.texample.net/tikz/examples/computer-science-mindmap/
+
+\documentclass{article}
+\usepackage[landscape]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{mindmap,trees}
+\usepackage{verbatim}
+
+\usepackage[utf8x]{inputenc}		% diacritice
+\usepackage[russian,ngerman,romanian]{babel} 
+\title{Aplicația 6 - Harta Conceptuală}
+\author{Bărbulescu Mihai \\ 331CA}
+
+\begin{document}
+\maketitle
+\begin{tikzpicture}
+  \path[mindmap,concept color=black,text=white]
+    node[concept] {Calculator}
+    [clockwise from=10]
+    
+    child[concept color=green!50!black] {
+      node[concept] {Software Free and Open Source}
+      [clockwise from=100]
+      child { node[concept] {KiCad} }
+      child { node[concept] {GNOME Evince} }
+      child { node[concept] {Libre Office} }
+      child { node[concept] {\LaTeX} }
+      child { node[concept] {Linux} }
+      child { node[concept] {Pidgin} }
+    }  
+    child[concept color=blue] {
+      node[concept] {IAC}
+      [clockwise from=-30]
+      child { node[concept] {strategie didactică} }
+      child { node[concept] {profesor modern} }
+    }
+    %child[concept color=red] { node[concept] {technical} }
+    child[concept color=cyan!70!black] {
+	node[concept] {Internet}
+	[clockwise from=-60]
+	child { 
+	  node[concept] {Google}
+	  [clockwise from=-30]
+	  child { node[concept] {Google Docs} }
+	  child { node[concept] {Google Maps} }
+	  child { node[concept] {Google Scholar} }
+	}
+	child { 
+	  node[concept] {Aplicații Web 2.0}
+	  [clockwise from=-50]
+	  child { node[concept] {Facebook} }
+	  child { node[concept] {Twitter} }
+	  child { node[concept] {Wordpress} }
+	  child { node[concept] {Zoho} }
+	  child { node[concept] {Wikipedia} }
+	}
+	child { node[concept] {Rețelistică} }
+    }
+    child[concept color=orange] { 
+      node[concept] {Computer Science} 
+      [clockwise from=180]
+	child { 
+	  node[concept] {Hardware}
+	  [clockwise from=180]
+	  child { node[concept] {Procesoare} }
+	  child { node[concept] {Placă video} }
+	  child { node[concept] {Tranzistor} }
+	}
+	child { 
+	  node[concept] {Calcul paralel și distribuit}
+	}
+	child { 
+	  node[concept] {Algoritmi}
+	}
+    };
+\end{tikzpicture}
+
+\end{document}
