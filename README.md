@@ -8,6 +8,16 @@ want to have an adaptable framework.
 
 Feel free to contribute to this code. 
 
+Additional note for Word conversion
+-----------------------------------
+
+Use the __math-basic__ project. It's designed to be as bare minimum as possible for
+conversion to be smooth by using:
+
+```
+pandoc -s math-basic.tex -o math-basic.docx
+``` 
+
 Contents
 ---------
 

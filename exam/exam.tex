@@ -1,0 +1,86 @@
+\documentclass[11pt]{exam}
+
+% Usepackages si setari pentru ecuatii
+\usepackage[utf8x]{inputenc}
+\usepackage{titlesec}
+
+\everymath{\displaystyle}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{graphicx}
+
+% Gestiunea formatului header-ului
+\newcommand{\class}{Olimpiada de Matematică, clasa a X-a }
+\newcommand{\theschool}{Liceul Teoretic A.I.Cuza}
+%\newcommand{\examnum}{Teză semestrul I}
+\newcommand{\term}{Anul școlar 2023-2024}
+\newcommand{\examdate}{Ianuarie 2024}
+\newcommand{\timelimit}{90 de minute}
+
+\firstpageheader{}{}{}
+\runningheader{\examnum, disciplina \class}{}{\examdate}
+\runningheadrule
+
+% Aranjamentul punctelor
+\renewcommand{\points}{p}
+% Plaseaza punctele in partea dreapta
+\pointsdroppedatright
+\pointsinrightmargin
+
+% Micsorare font pentru sectiuni
+\titleformat*{\section}{\normalsize\bfseries}
+\titleformat*{\subsection}{\normalsize\bfseries}
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{3pt}} l}
+& \textbf{Numele :} & \makebox[2in]{\hrulefill}\\
+\textbf{\class} &&\\
+\textbf{\examnum} & \textbf{Clasa:} & \makebox[2in]{\hrulefill}\\
+\textbf{\term} &&\\
+\textbf{\examdate} &&\\
+%& \textbf{Nota:} & \makebox[2in]{\hrulefill}
+\end{tabular*}
+
+\vspace{10 mm}
+
+%\rule[2ex]{\textwidth}{2pt}
+
+{\setlength{\parindent}{1 mm}
+Acest test conține \numquestions\ întrebări
+%Numărul total de puncte este \numpoints. 
+Pe foaia de examen scrieti redactarile complete.
+}
+
+{\setlength{\parindent}{2 mm}
+\textbf{Timp de lucru: \timelimit} 
+}
+
+\vspace{1mm}
+
+\begin{questions}
+
+
+\begingradingrange{section1}
+
+
+\question[7] Fie $z_1, z_2, z_3\in \mathbb{C}$ cu $|z_1| =|z_2|= |z_3| =1$ si $z_1 +z_2 +z_3 =1$. Atunci calculati $z_1^{2023} +z_2^{2023}+z_3^{2023}$.
+
+\question[7] Fie $z_A = 2+5i, z_B= 8-i, z_C= -2+i$
+\begin{parts}
+\part[3] Aflati afixul centrului cercului circumscris $\Delta ABC$.
+\part[4] Aflati afixul punctului $D$, unde $AD$ este inaltimea dusa din $A$ in $\Delta ABC, D\in BC.$
+\end{parts}
+
+
+\endgradingrange{section1}
+
+\setcounter{question}{0}
+
+\end{questions}
+
+\end{document}
+

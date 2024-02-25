@@ -1,0 +1,130 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{natbib}
+
+% Include support for correct printing of romanian characters
+\usepackage[T1]{fontenc}
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+
+\usepackage{hyperref}	  % use \url{http://$URL} or \href{http://$URL}{Name}
+\usepackage{underscore}	  % underscores need not be escaped
+\usepackage{subfigure}
+\usepackage{verbatim}
+\usepackage{float}
+\usepackage[export]{adjustbox} 
+
+% Support for including graphics
+\usepackage{graphicx}
+\usepackage{float}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.svg}
+
+%MB: tikz stuff
+\usepackage{tikz}
+\usetikzlibrary{arrows,automata}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{shapes}
+\usetikzlibrary{arrows}
+\usetikzlibrary{fit}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathreplacing} % for expanding waves
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{decorations.pathmorphing}
+%
+\usepackage[underline=true]{pgf-umlsd}
+\usetikzlibrary{calc}
+
+%All the math symbols stuff
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{braket}
+\usepackage{multicol}
+% \usepackage[top=1.5cm,bottom=3cm,left=3cm,right=2.5cm]{geometry}
+\usepackage[top=2.5cm,bottom=2.3cm,inner=2.5cm,outer=3cm]{geometry}
+%\usepackage[margin]{geometry}
+%\usepackage[cm]{fullpage}
+
+
+%BEGIN Romanian formatting and numbering
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definiția}
+\numberwithin{definition}{section}
+
+\theoremstyle{theorem}
+\newtheorem{theorem}{Teorema}
+\numberwithin{theorem}{section}
+
+\theoremstyle{prop}
+\newtheorem{prop}{Propoziție}
+\numberwithin{prop}{section}
+
+\theoremstyle{lema}
+\newtheorem{lema}{Lema}
+\numberwithin{lema}{section}
+
+\theoremstyle{corollary}
+\newtheorem{corollary}{Corolarul}
+\numberwithin{corollary}{section}
+
+\theoremstyle{axiom}
+\newtheorem{axiom}{Axioma}
+\numberwithin{axiom}{section}
+
+\theoremstyle{conjecture}
+\newtheorem{conjecture}{Conjectura}
+\numberwithin{conjecture}{section}
+
+\theoremstyle{plain}
+\newtheorem*{obs}{Observație}
+
+\theoremstyle{remark}
+\newtheorem*{ex}{Exemplu}
+
+\renewcommand{\proofname}{Demonstrație}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+%END Romanian formatting and numbering
+
+
+\everymath{\displaystyle}
+%Semnatura functiei \DeclareMathSizes{display size}{text size}{script size}{scriptscript size}.
+\DeclareMathSizes{15}{15}{9}{9}
+\numberwithin{equation}{section}
+
+
+\begin{document}
+
+
+\begin{titlepage}
+	\begin{center}
+		
+
+		\par\vspace*{35mm}
+		{\Huge Să învătăm din greșeli}
+		\par\vspace*{35mm}
+		\begin{table*}[h]
+        	\begin{center}
+				\begin{tabular}{lcccccl}
+					\Large \textbf{\Large Disciplina:}
+					\vspace*{1mm} &&&&&& \Large \textbf{\Large Autor:}\vspace*{1mm} \\
+					\Large Matematică &&&&&& \Large Ana Maria Bâcă
+				\end{tabular}
+			\end{center}
+		\end{table*}
+
+		\par\vspace*{40mm}
+		\Large București, 2024
+	\end{center}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\end{document}
+
